@@ -1,0 +1,783 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+  }
+  
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+  
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  #testimonials {
+    
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  #press {
+    text-align: center;
+    background-color: #ef8172;
+  }
+  
+  .testimonials-img {
+    width: 40%;
+    height: 10%;
+    margin: 20px;
+  }
+  
+   .carousel-item { 
+    padding: 1% 7%; 
+  } 
+  
+  .press-logo {
+    width: 15%;
+    margin: 20px 20px 15px;
+    align-items: center;
+    padding-bottom: 3%;
+  }
+  
+  .first {
+    margin: 10px 10px 10px 10px;
+  }
+  
+  .second {
+    margin: 10px 10px 10px 10px;
+  }
+  
+  .third {
+    margin: 10px 10px 10px 10px;
+  }
+
+
+
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Yantramanav', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    height: calc(100vh - 20px);
+}
+
+.container {
+    width: 95%;
+    height: 20%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header styles */
+.header {
+    display:flex;
+    background-color: #e9ae55;
+    padding: 15px 0;
+    color: #ffffff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    flex-direction: row;
+}
+
+.logo {
+    margin-right: 10px; /* Add spacing between logo and website name */
+}
+
+.website-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    letter-spacing: 2px;
+}
+
+.top-part {
+    font-family: 'Yantramanav', sans-serif;
+    display: block; /* Ensure each part is displayed as a block element */
+    font-size: 24px; /* Adjust the font size as needed for both parts */
+    color: #000000; /* Change the color for both parts */
+    margin-bottom: 10px;
+}
+
+.bottom-part {
+    font-family: 'Yantramanav', sans-serif;
+    display:block;
+    font-size: 24px;
+    color: #000000;
+    margin-top: -20px;
+}
+
+/* Navbar styles */
+.navbar {
+
+    display:content;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+}
+
+/* Update or add the following styles to your existing CSS */
+.navbar-list {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.navbar-list li {
+    margin-right: 50px; /* Adjust spacing between buttons */
+}
+
+.navbar-list li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+}
+
+.navbar-list li a {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Button text color */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 15px; /* Adjust padding as needed */
+}
+
+.navbar-list li a:hover {
+    border-color: #999; /* Darker border on hover */
+}
+
+.btn-link, .btn {
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    font-weight: bold;
+    color: black;
+    border: 1px solid #eeecec; /* Light border */
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    font-size: 18px; /* Increase the font size */
+}
+
+.btn-link:hover, .btn:hover {
+    background-color: #fff;
+    color: #FFD700; /* Change the color on hover */
+    border-color: #999;
+}
+/* Add your existing styles for the button here */
+
+/* Location */
+.city-suggestions-container {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+  }
+  
+  .input_location_box {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  
+  .input_location {
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  
+  .react-autosuggest__suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000; /* Ensure suggestions appear above other elements */
+    background-color: #fff;
+    border: 1px solid;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px;
+    max-height: 200px; /* Adjust as needed */
+    overflow-y: auto;
+  }
+  
+  .input_search_result {
+    padding: 10px;
+  }
+  
+  /* .input_search_recent {
+    /* Additional styling for search results or recent searches */
+  /* } */ 
+  
+  /* Style for individual suggestion items */
+  .react-autosuggest__suggestion {
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  /* Style for the selected suggestion item */
+  .react-autosuggest__suggestion--highlighted {
+    background-color: #f0f0f0;
+  }
+  
+
+.search-input {
+    display: none; /* Initially hide the input field */
+    padding: 8px 15px;
+    margin: 0 5px;
+    color: black; /* Adjust text color as needed */
+    border: 1px solid; /* Adjust border color as needed */
+    border-radius: 45%;
+    font-size: 16px;
+}
+
+/* Add styles for the input field when it's visible */
+.btn-link.active {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid;
+}
+
+.logo-icon {
+    width: 30px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between icon and text */
+}
+
+.active {
+    font-weight: bold; /* Style active link */
+}
+
+
+/* Add or update the following styles in your existing CSS */
+
+.plans-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    gap: 20px; /* Gap between plan boxes */
+}
+
+.plan {
+    border: 1px solid #a87e23; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding around plan box */
+}
+
+.plan h3 {
+    margin-top: 0; /* Remove top margin for plan title */
+}
+
+.plan ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+.plan button {
+    display: block; /* Make the button a block element */
+    margin-top: 10px; /* Add some space between the plan content and button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.plan button:hover {
+    background-color: #ff4545; /* Darker background color on hover */
+}
+
+
+
+/* Main content styles */
+.main-content {
+    background-color: #f7f7f7; /* Set a light background color */
+    text-align: center; /* Center the content */
+    font-size: medium;
+    margin-bottom: 100px;
+}
+
+.content-container {
+    max-width: 800px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+h1 {
+    font-size: 40px; /* Set a larger font size for the heading */
+    color: #333; /* Set the heading color */
+}
+
+p {
+    font-size: 22px; /* Set a comfortable font size for the paragraph */
+    color: #333; /* Set the paragraph text color */
+}
+
+/* Matrix container styles */
+.matrix-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.matrix-box {
+    width: 150px; /* Increased width */
+    height: 150px; /* Increased height */
+    background-color:rgb(219, 182, 62);
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 40px
+}
+
+.box-text {
+    margin-top: 10px; /* Adjusted margin */
+    text-align: center;
+    font-size: 24px; /* Increased font size */
+    color: black;
+}
+
+/* Styles for pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 40px; /* Increased padding for larger pop-up */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+    height: 400px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-height: 80%;
+    overflow-y: auto; 
+}
+
+/* Styles for services */
+.service-box {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    /* Add more styles as needed */
+}
+
+.service-box img {
+    width: 80px;
+    height: 80px;
+    /* Add more styles as needed */
+}
+
+/* Styles for overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px); /* Adjust blur intensity as needed */
+    z-index: 999;
+}
+
+/* offer-zone  */
+.offer-zone {
+    background-color: #ddb045;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.offer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.offer {
+    text-align: center;
+}
+
+.offer img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+
+/* Service Section Styles */
+
+.service-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.service-category {
+    text-align: center;
+}
+
+.service-category h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.small-container {
+    width: 80%;
+    margin: auto;
+}
+.small-container h2{
+    text-align:center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.col-3 {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.col-3 img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.col-3 h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.col-4 {
+    flex: 0 0 calc(25% - 20px);
+    margin-bottom: 20px;
+}
+
+.col-4 img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.col-4 h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rating {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.rating i {
+    color: #f39c12;
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+/*<!-- Single  product details -->*/
+
+.single-service{
+    margin-top: 80px;
+}
+
+.single-service .col-2 img{
+    padding: 0;
+}
+
+.single-service .col-2{
+    padding: 20px;
+}
+
+.single-service h4{
+    margin: 30px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.single-service select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.single-service input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #ff523b;
+}
+
+.single-service .col-2 > p{
+    margin-bottom: 20px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.single-service .fa{
+    color: #ff523b;
+    margin-left: 10px;
+}
+
+.single-service .col-2 h3{
+    margin-bottom: 10px;
+}
+
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+/*-----------cart items details---------------*/
+
+.cart-page{
+    margin: 80px auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background:#ff523b ;
+    font-weight: normal;
+}
+td{
+    padding: 10px;
+
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: #ff523b;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+.cart-page{
+    margin: 80px auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background:#ff523b ;
+    font-weight: normal;
+}
+td{
+    padding: 10px;
+
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: #ff523b;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+
+
+
+
+/* Footer styles */
+/* Styles for footer container */
+.footer {
+     /* Fix the footer to the bottom of the viewport */
+    
+    background-color: #ffffff;
+    
+    
+}
+.footer img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add some spacing below the logo */
+}
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 20%;
+}
+
+/* Styles for footer columns */
+.col {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+    flex: 1;
+    padding: 10px;
+    text-align: center; /* Align content within columns to the left */
+}
+
+/* Styles for social media icons */
+.footer-col-4 a {
+    display: block;
+    margin-bottom: 10px; /* Adds space between icons */
+    color: #333;
+    text-decoration: none;
+}
+
+/* Styles for footer headings */
+h3 {
+    color: #333;
+}
+
+/* Styles for footer lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+/* Styles for copyright text */
+.copyright {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+}
+
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    /* Adjust other styles for smaller screens */
+}
+/* carasol */
