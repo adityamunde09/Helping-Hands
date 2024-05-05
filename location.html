@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Popup container - can be anything you want */
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+      button {
+    display: block; /* Make the button a block element */
+    margin-top: 10px; /* Add some space between the plan content and button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #000000; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    }
+
+    /* The actual pop-up box */
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+  <!-- Include Google Maps API script -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script>
+</head>
+<body>
+  <div id="location-input">
+    <input type="text" id="location-input-box" placeholder="Enter a location...">
+    <button id="location-input-button">Get Suggested Location</button>
+  </div>
+
+  <div id="suggested-location" class="popup">
+    <div class="popuptext" id="suggested-location-text">Pune</div>
+    
+    <button class="closebtn" onclick="closePopup()">&times;</button>
+  </div>
+
+  <div id="map" style="height: 400px; width: 100%;"></div>
+
+  <script>
+    // Initialize the map
+    function initMap() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          const userLocation = { lat: position.coords.latitude, lng: position.coords.longitude };
+          const map = new google.maps.Map(document.getElementById("map"), {
+            center: userLocation,
+            zoom: 15,
+          });
+
+          const input = document.getElementById("location-input-box");
+          const searchBox = new google.maps.places.SearchBox(input);
+          map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+          const button = document.getElementById("location-input-button");
+          button.addEventListener("click", () => {
+            const places = searchBox.getPlaces();
+            if (places.length == 0) {
+              return;
+            }
+
+            const suggestedLocation = places[0];
+            const suggestedLocationText = document.getElementById("suggested-location-text");
+            suggestedLocationText.innerText = suggestedLocation.formatted_address;
+
+            document.getElementById("suggested-location").classList.add("show");
+          });
+
+          map.addListener("bounds_changed", () => {
+            searchBox.setBounds(map.getBounds());
+          });
+        });
+      } else {
+        // Handle Geolocation not supported by the browser
+        alert('Geolocation is not supported by your browser');
+      }
+    }
+
+    // Close popup
+    function closePopup() {
+      document.getElementById("suggested-location").classList.remove("show");
+    }
+  </script>
+</body>
+</html>

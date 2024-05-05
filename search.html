@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Services</title>
+  <style>
+    /* CSS styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+    }
+
+    .popup-content {
+      background-color: #fefefe;
+      margin: 20% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .close {
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #servicesList {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #servicesList li {
+      margin-bottom: 10px;
+      cursor: pointer; /* Add cursor pointer to indicate clickable */
+    }
+
+    /* Search bar styles */
+    #searchInput {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Link to trigger search services -->
+  <a href="#" id="searchButton">Search Services</a>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" id="closeButton">&times;</span>
+      <input type="text" id="searchInput" placeholder="Search Services">
+      <ul id="servicesList">
+        <li>Service 1</li>
+        <li>Service 2</li>
+        <li>Service 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchButton = document.getElementById('searchButton');
+        const popup = document.getElementById('popup');
+        const closeButton = document.getElementById('closeButton');
+        const servicesList = document.getElementById('servicesList');
+        const searchInput = document.getElementById('searchInput');
+
+        // Show the popup when search button is clicked
+        searchButton.addEventListener('click', function() {
+          popup.style.display = 'block';
+        });
+
+        // Hide the popup when close button is clicked
+        closeButton.addEventListener('click', function() {
+          popup.style.display = 'none';
+        });
+
+        // Fill search input with clicked service when clicked
+        servicesList.addEventListener('click', function(event) {
+          if (event.target.tagName === 'LI') {
+            searchInput.value = event.target.textContent;
+            popup.style.display = 'none'; // Hide popup after selecting service
+          }
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Booked Services</title>
+    <link rel="stylesheet" href="mostbook.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+}
+
+.service {
+    flex: 0 0 auto;
+    margin: 20px;
+    width: 250px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.service h3 {
+    margin-top: 0;
+}
+
+.service p {
+    margin-bottom: 10px;
+}
+
+.service p:last-child {
+    font-weight: bold;
+    color: #337ab7;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+        /* CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Most Booked Services</h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="service">
+                    <img src="painter1.jpg" alt="Foam-jet">
+                    <h3>Foam-jet</h3>
+                    <p>Rating: 4.83 (319.1K)</p>
+                    <p>Price: ₹599</p>
+                </div>
+                <div class="service">
+                    <img src="/helping-hands/Images/clean/bedroom_clean.jpg" alt="Power Saver AC service">
+                    <h3>Power Saver AC service</h3>
+                    <p>Rating: 4.83 (319.1K)</p>
+                    <p>Price: ₹599</p>
+                </div>
+                <div class="service">
+                    <img src="painter1.jpg" alt="Foam-jet">
+                    <h3>Foam-jet</h3>
+                    <p>Rating: 4.83 (319.1K)</p>
+                    <p>Price: ₹599</p>
+                </div>
+                <div class="service">
+                    <img src="/helping-hands/Images/clean/bedroom_clean.jpg" alt="Power Saver AC service">
+                    <h3>Power Saver AC service</h3>
+                    <p>Rating: 4.83 (319.1K)</p>
+                    <p>Price: ₹599</p>
+                </div>
+                <!-- Add more services here -->
+                <div class="service">
+                    <img src="/helping-hands/Images/electrician/Electrician4.jpg" alt="AC repair (split/window)">
+                    <h3>AC repair (split/window)</h3>
+                    <p>Rating: 4.80 (327.6K)</p>
+                    <p>Price: ₹299</p>
+                </div>
+                <div class="service">
+                    <img src="/helping-hands/Images/AC/Ac3.jpg" alt="Hydration facials & cleanups">
+                    <h3>Hydration facials & cleanups</h3>
+                    <p>Rating: 4.83 (258.9K)</p>
+                    <p>Price: ₹399</p>
+                </div>
+                <div class="service">
+                    <img src="elysian-british-rose.jpg" alt="Elysian British Rose pedicure">
+                    <h3>Elysian British Rose pedicure</h3>
+                    <p>Rating: 4.83 (246.7K)</p>
+                    <p>Price: ₹759</p>
+                </div>
+                <div class="service">
+                    <img src="deluxe-pedicure.jpg" alt="Deluxe pedicure">
+                    <h3>Deluxe pedicure</h3>
+                    <p>Rating: 4.81 (328.2K)</p>
+                    <p>Price: ₹549</p>
+                </div>
+                <!-- Add more services here -->
+                <div class="service">
+                    <img src="/helping-hands/Images/electrician/Electrician4.jpg" alt="AC repair (split/window)">
+                    <h3>AC repair (split/window)</h3>
+                    <p>Rating: 4.80 (327.6K)</p>
+                    <p>Price: ₹299</p>
+                </div>
+                <div class="service">
+                    <img src="/helping-hands/Images/AC/Ac3.jpg" alt="Hydration facials & cleanups">
+                    <h3>Hydration facials & cleanups</h3>
+                    <p>Rating: 4.83 (258.9K)</p>
+                    <p>Price: ₹399</p>
+                </div>
+                <div class="service">
+                    <img src="elysian-british-rose.jpg" alt="Elysian British Rose pedicure">
+                    <h3>Elysian British Rose pedicure</h3>
+                    <p>Rating: 4.83 (246.7K)</p>
+                    <p>Price: ₹759</p>
+                </div>
+                <div class="service">
+                    <img src="deluxe-pedicure.jpg" alt="Deluxe pedicure">
+                    <h3>Deluxe pedicure</h3>
+                    <p>Rating: 4.81 (328.2K)</p>
+                    <p>Price: ₹549</p>
+                </div>
+                 <div class="service">
+                    <img src="painter1.jpg" alt="Foam-jet">
+                    <h3>Foam-jet</h3>
+                    <p>Rating: 4.83 (319.1K)</p>
+                    <p>Price: ₹599</p>
+                </div>
+                <div class="service">
+                    <img src="/helping-hands/Images/clean/bedroom_clean.jpg" alt="Power Saver AC service">
+                    <h3>Power Saver AC service</h3>
+                    <p>Rating: 4.83 (319.1K)</p>
+                    <p>Price: ₹599</p>
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        const carousel = document.querySelector('.carousel');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let counter = 0;
+const carouselWidth = carousel.offsetWidth;
+const serviceCount = carousel.querySelectorAll('.service').length;
+const serviceWidth = document.querySelector('.service').offsetWidth;
+
+const autoCarousel = () => {
+    setInterval(() => {
+        counter++;
+        if (counter >= serviceCount) {
+            counter = 0;
+            carousel.style.transition = 'none';
+            carousel.style.transform = `translateX(0px)`;
+            setTimeout(() => {
+                carousel.style.transition = 'transform 0.5s ease';
+                counter = 1;
+                carousel.style.transform = `translateX(-${counter * serviceWidth}px)`;
+            }, 50); // Small delay to reset transition
+        } else {
+            carousel.style.transform = `translateX(-${counter * serviceWidth}px)`;
+        }
+    }, 2500); // Adjust interval as needed (3000ms = 3 seconds)
+};
+
+prevBtn.addEventListener('click', () => {
+    counter--;
+    if (counter < 0) counter = 0;
+    carousel.style.transform = `translateX(-${counter * serviceWidth}px)`;
+});
+
+nextBtn.addEventListener('click', () => {
+    counter++;
+    if (counter >= serviceCount) {
+        counter = serviceCount - 1;
+    }
+    carousel.style.transform = `translateX(-${counter * serviceWidth}px)`;
+});
+
+// Call autoCarousel function to start automatic sliding
+autoCarousel();
+
+    </script>
+</body>
+</html>
